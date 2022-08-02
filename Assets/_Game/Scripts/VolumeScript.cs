@@ -7,7 +7,10 @@ public class VolumeScript : MonoBehaviour
 
     [Header("Volume Selection")]
     [SerializeField] [Tooltip("The property you wish to give this object")] private VolumeType _volumeType;
-    
+    [Range(1, 10)]
+
+    [SerializeField] private int dmgValue = 5;
+
     private void Start()
     {
         if(_volumeType == VolumeType.Win)
@@ -33,6 +36,7 @@ public class VolumeScript : MonoBehaviour
             Debug.Log("Ouch!");
             var cubeRenderer = gameObject.GetComponent<Renderer>();
             cubeRenderer.material.color = Color.yellow;
+
 
         }
 
