@@ -13,17 +13,27 @@ public class VolumeScript : MonoBehaviour
         if(_volumeType == VolumeType.Win)
         {
             Debug.Log("You Win!");
+            var cubeRenderer = gameObject.GetComponent<Renderer>();
+            cubeRenderer.material.color = Color.green;
+
+
         }
 
         if (_volumeType == VolumeType.Lose)
         {
             Debug.Log("You Lose!");
+            var cubeRenderer = gameObject.GetComponent<Renderer>();
+            cubeRenderer.material.color = Color.red;
+
         }
 
 
         if (_volumeType == VolumeType.Hazard)
         {
             Debug.Log("Ouch!");
+            var cubeRenderer = gameObject.GetComponent<Renderer>();
+            cubeRenderer.material.color = Color.yellow;
+
         }
 
 
