@@ -7,5 +7,5 @@ public class VolumeData : ScriptableObject
     
     [Header("Volume Selection")]
     [SerializeField] [Tooltip("The property you wish to give this object")] private VolumeType _volumeType;
-
+    [SerializeField] public int _range;
 }
